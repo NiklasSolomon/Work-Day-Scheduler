@@ -1,8 +1,9 @@
-// DECLARE current time
-
+// DECLARE current date
+var todaysDate = moment().format('dddd, MMM Do YYYY');
 // DECLARE current hour
-
+var timeNow = moment().format("H A");
 // DECLARE currentDay element
+$("#currentDay").html(todaysDate);
 
 // DECLARE timeEntries container element
 var containerEl;
@@ -30,6 +31,7 @@ for(var i = 9; i <= 17; i++){
         </div>
     `;
     // Append the html to the container element
+    $(".container").append(row);
 }
 
 // Set up a "click" event listener on the container
