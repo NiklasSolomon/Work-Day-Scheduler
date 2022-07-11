@@ -1,5 +1,5 @@
 # Work-Day-Scheduler
-
+[Link to live webpage](https://niklassolomon.github.io/Work-Day-Scheduler/)
 ## Goal:
 The goal of this project was to build a webpage that allows for the storage of journal events in a time block calendar showing each working hour of the day. The time block color should change to indicate whether that time block has passed, and the date should be displayed at the top of the page.
 
@@ -11,3 +11,5 @@ This assignment will display the students knowledge of third-party APIs to add s
 
 ## Result:
 The webpage is structured and styled according to the criteria. The time blocks change color based on the current time of day. Text can be input into the text area, and the save button can be pressed to save. Currently, the code does not function to save to local storage, and it cannot be retrieved from local storage either.
+
+![Screenshot of webpage](workdayscreenshot.png)
