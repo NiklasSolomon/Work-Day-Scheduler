@@ -1,3 +1,4 @@
+$(document).ready(function () {
 // DECLARE current date
 // DECLARE current hour
 var todaysDate = moment().format('MMMM Do YYYY, h:mm A');
@@ -9,14 +10,13 @@ var saveBtn = $(".saveBtn");
 
 // Set up a "click" event listener on the container
 saveBtn.on("click", function() {
-
+    // Save an hour to local storage
+    // console.log(this);
     // Fetch the hour from the clicked button's (event.target) "data-hour" attribute
-    var time = $(this).siblings(".hour").text();
-    var event =$(this).siblings(".event").val();
     // Use the hour to create the key for local storage
-
-    // From the clicked button, traverse the DOM to the nearby <textarea> to fetch its value
-
+    var time = $(this).parent.attr("id").text();
+    var event = $(this).siblings(".description").val();
+    
     // Use the key and the value to save into local storage
     localStorage.setItem(time, event);
 });
@@ -48,8 +48,8 @@ function timeColor() {
         }
     }) 
 };
-// Save an hour to local storage
 
 // Call functions
 saveEvent();
 timeColor();
+})
